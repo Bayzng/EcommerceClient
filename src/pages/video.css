@@ -1,0 +1,32 @@
+@media screen and (min-device-width: 360px) {
+    .video video {
+        /* border-radius: 18px;
+        width: 250px;
+        
+        margin-bottom: -130px;
+        margin-left: 17%;
+        border: 7px solid #324d67; */
+        display: none;
+    } 
+
+    .mygif {
+        display: none;
+    }
+}
+
+
+@media screen and (min-device-width: 1030px) {
+    .video video {
+        border-radius: 18px;
+        width: 550px;
+        /* margin-bottom: 50%; */
+        margin-bottom: -130px;
+        margin-left: 50%;
+        border: 7px solid #324d67;
+        display: block;
+    }
+
+    .mygif {
+        display: block;
+    }
+}
