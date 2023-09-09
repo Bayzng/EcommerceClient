@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  h2{
+    color: white;
+    text-align: center;
+  }
+  
+  .mainContainer{
+    position: relative;
+    margin: 10px;
+  }
+
+  .client {
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+  }
+
+  .client span {
+    text-decoration: overline;
+    font-size: 2.5rem;
+    color: #324d67;
+  }
+  
+  .mainContainer .container{
+    padding: 40px 0;
+  }
+  
+  .mainContainer .container img{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  div h3{
+    color: white;
+    font-weight: bold;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  @media screen and (max-width: 420px) {
+    .mainContainer {
+      display: none;
+    }
+
+    .adsimage {
+      display: none;
+    }
+  }
+
+.info {
+  font-size: 1rem;
+  margin-left: 2.8rem;
+  margin-bottom: 5rem;
+}
+
+.adsimage {
+  margin-left: 5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.button {
+  --border-right: 6px;
+  --text-stroke-color: black;
+  --animation-color: #324d67;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+.marquee {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.track {
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+  /* width: 180%; */
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-40%); }
+}
+
+
+
+
+@media screen and (min-device-width : 1030px) {
+  .marquee {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .track {
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+    /* width: 180%; */
+  }
+  
+  .track:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+
+
+.bayo{
+  margin-top: 7rem;
+  display: flex;
+  padding: 20px;
+  gap: 220px;
+  /* width: 140px; */
+}
+.bayo img{
+  width: 150px;
+}
+
+.newImage  {
+  width: 70px;
+  position: absolute;
+}
+
+
+
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+.photobanner {
+	position: relative;
+	height: 233px;
+	margin-bottom: 30px;
+	display: flex;
+	width: 100%;
+}
+
+.photobanner img {
+  margin: 0px 25px;
+  box-shadow: 2px 2px 8px #8a8a8a;
+}
+
+.photobanner {
+  animation: bannermove 50s linear infinite alternate-reverse;
+}
+
+@keyframes bannermove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -2700px;
+  }
+}
